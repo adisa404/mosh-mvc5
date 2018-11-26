@@ -7,10 +7,11 @@ namespace Vidly.Models
 {
 	public class MembershipType
 	{
-		public double SignUpFee { get; set; }
+		public byte Id { get; set; }
+		public short SignUpFee { get; set; }
 
-		public short Duration { get; set; }
+		public byte DurationInMonths { get; set; }
 
-		public short DiscountRate { get; set; }
+		public byte DiscountRate { get; set; }
 	}
 }

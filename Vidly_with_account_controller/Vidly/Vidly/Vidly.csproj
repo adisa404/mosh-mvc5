@@ -210,6 +210,10 @@
     <Compile Include="Migrations\201811260951119_AddIsSubscribedToNewsletterToCustomer.Designer.cs">
       <DependentUpon>201811260951119_AddIsSubscribedToNewsletterToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811261003116_AddMemebershipType.cs" />
+    <Compile Include="Migrations\201811261003116_AddMemebershipType.Designer.cs">
+      <DependentUpon>201811261003116_AddMemebershipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -309,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811260951119_AddIsSubscribedToNewsletterToCustomer.resx">
       <DependentUpon>201811260951119_AddIsSubscribedToNewsletterToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811261003116_AddMemebershipType.resx">
+      <DependentUpon>201811261003116_AddMemebershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

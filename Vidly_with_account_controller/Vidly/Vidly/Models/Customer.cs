@@ -11,5 +11,12 @@ namespace Vidly.Models
 		public string Name { get; set; }
 
 		public bool IsSubscribedToNewsletter { get; set; }
+
+		// navigation property 
+		// used when you wnat to load both customer and membership type from db
+		public MembershipType MembershipType { get; set; }
+
+		// foreign key
+		public byte MembershipTypeId { get; set; } 
 	}
 }
