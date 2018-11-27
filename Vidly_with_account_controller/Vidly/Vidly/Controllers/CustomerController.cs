@@ -32,7 +32,7 @@ namespace Vidly.Controllers
 		{
 			if (!id.HasValue) return HttpNotFound();
 
-			var customer = GetCustomers().Where(c => c.Id == id).FirstOrDefault();
+			var customer = _context.Customers.Where(c => c.Id == id).FirstOrDefault();
 			return View(customer);
 		}
 
