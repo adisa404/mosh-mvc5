@@ -38,13 +38,5 @@ namespace Vidly.Controllers
 			var customer = _context.Customers.Where(c => c.Id == id).FirstOrDefault();
 			return View(customer);
 		}
-
-		private IEnumerable<Customer> GetCustomers()
-		{
-			return new List<Customer>() {
-				new Customer { Name = "Customer 1", Id = 1},
-				new Customer { Name = "Customer 2", Id = 2}
-			};
-		}
 	}
 }
