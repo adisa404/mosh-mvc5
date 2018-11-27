@@ -15,6 +15,8 @@ namespace Vidly.Models
 
 		public bool IsSubscribedToNewsletter { get; set; }
 
+		public DateTime? Birthdate { get; set; }
+
 		// navigation property 
 		// used when you wnat to load both customer and membership type from db
 		public MembershipType MembershipType { get; set; }
