@@ -234,6 +234,10 @@
     <Compile Include="Migrations\201811271006514_AddBirthDateToCustomer.Designer.cs">
       <DependentUpon>201811271006514_AddBirthDateToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811271103081_AddMovie.cs" />
+    <Compile Include="Migrations\201811271103081_AddMovie.Designer.cs">
+      <DependentUpon>201811271103081_AddMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -351,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811271006514_AddBirthDateToCustomer.resx">
       <DependentUpon>201811271006514_AddBirthDateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811271103081_AddMovie.resx">
+      <DependentUpon>201811271103081_AddMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
