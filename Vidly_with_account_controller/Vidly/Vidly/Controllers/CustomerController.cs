@@ -23,9 +23,9 @@ namespace Vidly.Controllers
 		// GET: Customer
 		public ActionResult Index()
         {
-			var customers = _context.Customers;
+			var customers = _context.Customers.ToList();
 
-			return View(customers.ToString());
+			return View(customers);
 		}
 
 		public ActionResult Edit(int? id)
