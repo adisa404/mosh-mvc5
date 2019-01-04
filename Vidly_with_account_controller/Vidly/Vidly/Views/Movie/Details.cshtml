@@ -5,10 +5,10 @@
 
 <h2>@Model.Name</h2>
 <ul>
-	<li>@Model.Genres.Name</li>
-	<li>@Model.DateAdded</li>
-	<li>@Model.DateReleased</li>
-	<li>@Model.NumberInStock</li>
+	<li>Genre: @Model.Genres.Name</li>
+	<li>DateAdded: @Model.DateAdded.ToLongDateString()</li>
+	<li>DateReleased: @Model.DateReleased.ToLongDateString()</li>
+	<li>NumberInStock: @Model.NumberInStock</li>
 </ul>
 
 
