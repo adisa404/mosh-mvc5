@@ -22,6 +22,7 @@ namespace Vidly.Models
 		public MembershipType MembershipType { get; set; }
 
 		// foreign key
+		[Display(Name = "Membership Type")]
 		public byte MembershipTypeId { get; set; } 
 	}
 }

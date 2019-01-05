@@ -1,0 +1,38 @@
+﻿@model Vidly.ViewModels.CustomerFormViewModel
+@{
+	/**/
+
+	ViewBag.Title = "CustomerForm";
+}
+
+<h2>New Customer</h2>
+
+@*@Html.BeginForm("Save", "Customer")*
+	--- since this begin form doesnt end the form,
+	we can use the using block*@
+
+@using (@Html.BeginForm("Save", "Customer"))
+{
+	<div class="form-group">
+		@Html.LabelFor(m => m.Customer.Name)
+		@Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })
+	</div>
+	<div class="form-group">
+		@Html.LabelFor(m => m.Customer.Birthdate)
+		@Html.TextBoxFor(m => m.Customer.Birthdate, new { @class = "form-control" })
+	</div>
+	<div class="form-check">
+		<label>@Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsletter) Is subscribed to Newsletter</label>
+	</div>
+	<div class="form-group">
+		@Html.LabelFor(m => m.Customer.MembershipTypeId)
+
+		@Html.DropDownListFor(m => m.Customer.MembershipTypeId,
+	   new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type", 
+	   @*" " ---> adding a blank item on top of the dropdown list*@
+	new { @class = "form-control" })
+	</div>
+	@Html.HiddenFor(m=>m.Customer.Id)
+	<button type="submit" class="btn btn-primary">Save</button>
+}
+
