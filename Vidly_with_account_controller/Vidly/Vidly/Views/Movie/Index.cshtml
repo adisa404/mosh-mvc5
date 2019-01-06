@@ -3,6 +3,7 @@
 	ViewBag.Title = "Movies";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@Html.ActionLink("New Movie", "New", "Movie", new { @class= "btn btn-primary" })
 <table>
 	<thead>
 		<tr>
@@ -14,7 +15,7 @@
 		@foreach (var movie in Model)
 		{
 			<tr>
-				<td>@Html.ActionLink(movie.Name, "Details", "Movie", new { id = movie.Id }, null)</td>
+				<td>@Html.ActionLink(movie.Name, "Edit", "Movie", new { id = movie.Id }, null)</td>
 				<td>@movie.Genres.Name</td>
 			</tr>
 		}
