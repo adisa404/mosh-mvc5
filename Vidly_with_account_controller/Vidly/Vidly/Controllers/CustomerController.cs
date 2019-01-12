@@ -35,6 +35,18 @@ namespace Vidly.Controllers
 		[HttpPost]
 		public ActionResult Save(Customer customer)
 		{
+			// use model state to change the application flow
+			if (!ModelState.IsValid)
+			{
+				var viewModel = new CustomerFormViewModel()
+				{
+					MembershipTypes = _context.MembershipTypes,
+					Customer = customer
+				};
+
+				return View("CustomerForm", viewModel);
+			}
+
 			// since the same action is used for saving and creating the customer
 			// we first need to check if the id of customer is found in db
 			// if not add
@@ -65,6 +77,7 @@ namespace Vidly.Controllers
 
 			var viewModel = new CustomerFormViewModel()
 			{
+				Customer = new Customer(),
 				MembershipTypes = membershipTypes
 			};
 
