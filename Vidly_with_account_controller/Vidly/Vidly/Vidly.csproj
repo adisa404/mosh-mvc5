@@ -250,6 +250,10 @@
     <Compile Include="Migrations\201901121322239_ChangeStringLengthOfCustomerName.Designer.cs">
       <DependentUpon>201901121322239_ChangeStringLengthOfCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901121411569_addAttributesToMovieModel.cs" />
+    <Compile Include="Migrations\201901121411569_addAttributesToMovieModel.Designer.cs">
+      <DependentUpon>201901121411569_addAttributesToMovieModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -385,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901121322239_ChangeStringLengthOfCustomerName.resx">
       <DependentUpon>201901121322239_ChangeStringLengthOfCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901121411569_addAttributesToMovieModel.resx">
+      <DependentUpon>201901121411569_addAttributesToMovieModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
