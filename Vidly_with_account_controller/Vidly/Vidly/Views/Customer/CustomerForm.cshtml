@@ -13,9 +13,21 @@
 
 @using (@Html.BeginForm("Save", "Customer"))
 {
+	@* with true, exclude summary messages*@
+	@Html.ValidationSummary(true, "Please define missing fields.")
 	<div class="form-group">
 		@Html.LabelFor(m => m.Customer.Name)
 		@Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })
+		@Html.ValidationMessageFor(m => m.Customer.Name)
+	</div>
+	<div class="form-group">
+		@Html.LabelFor(m => m.Customer.MembershipTypeId)
+
+		@Html.DropDownListFor(m => m.Customer.MembershipTypeId,
+	   new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type",
+			@*" " ---> adding a blank item on top of the dropdown list*@
+			new { @class = "form-control" })
+		@Html.ValidationMessageFor(m => m.Customer.MembershipTypeId)
 	</div>
 	<div class="form-group">
 		@Html.LabelFor(m => m.Customer.Birthdate)
@@ -24,15 +36,7 @@
 	<div class="form-check">
 		<label>@Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsletter) Is subscribed to Newsletter</label>
 	</div>
-	<div class="form-group">
-		@Html.LabelFor(m => m.Customer.MembershipTypeId)
-
-		@Html.DropDownListFor(m => m.Customer.MembershipTypeId,
-	   new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type", 
-	   @*" " ---> adding a blank item on top of the dropdown list*@
-	new { @class = "form-control" })
-	</div>
-	@Html.HiddenFor(m=>m.Customer.Id)
+	@Html.HiddenFor(m => m.Customer.Id)
 	<button type="submit" class="btn btn-primary">Save</button>
 }
 
