@@ -33,6 +33,7 @@ namespace Vidly.Controllers
 		}
 
 		[HttpPost]
+		[ValidateAntiForgeryToken]
 		public ActionResult Save(Customer customer)
 		{
 			// use model state to change the application flow
