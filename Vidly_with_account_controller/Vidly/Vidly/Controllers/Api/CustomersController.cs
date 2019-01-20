@@ -10,9 +10,14 @@ using Vidly.Models;
 
 namespace Vidly.Controllers.Api
 {
-    public class CustomerController : ApiController
+    public class CustomersController : ApiController
     {
 		private ApplicationDbContext _context;
+
+		public CustomersController()
+		{
+			_context = new ApplicationDbContext();
+		}
 
 		// GET /api/customers
 		public IEnumerable<CustomerDto> GetCustomers()
