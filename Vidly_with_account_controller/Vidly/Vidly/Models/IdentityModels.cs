@@ -1,8 +1,10 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Vidly.Dtos;
 
 namespace Vidly.Models
 {
@@ -25,6 +27,9 @@ namespace Vidly.Models
 		public DbSet<MembershipType> MembershipTypes { get; set; }
 
 		public DbSet<Genre> Genres { get; set; }
+		// generated code TODO check if this is necessary
+		// public IEnumerable<CustomerDto> Mapper { get; internal set; }
+
 
 		public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
