@@ -22,14 +22,7 @@ namespace Vidly.Dtos
 		public DateTime DateAdded { get; set; }
 
 		[Required]
-		public DateTime DateReleased
-		{
-			get
-			{
-				return new DateTime();
-			}
-			set { }
-		}
+		public DateTime DateReleased { get; set; }
 
 		[Required]
 		[Range(1, 20)]
